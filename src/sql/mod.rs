@@ -65,9 +65,9 @@ impl SqlBuilder {
     pub(crate) fn finish(self) -> Result<String> {
         match self {
             Self::InProgress { result } => {
-                if result.contains('?') {
-                    panic!("unbound query argument: ?");
-                }
+//                 if result.contains('?') {
+//                     panic!("unbound query argument: ?");
+//                 }
 
                 if result.contains(FIELDS_PLACEHOLDER) {
                     panic!("unbound query argument: ?fields");
